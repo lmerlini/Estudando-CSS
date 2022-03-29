@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>grid 2</title>
+		<style type="text/css">
+			
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+
+		<div id="app"></div>
+		<section class="grid2">
+			<div class="video">
+				<img src="https://via.placeholder.com/1270x700/ffffaa/808080%20?Text=Digital.com" alt="">
+				<p>legenda</p>
+			</div>
+
+			<div class="sidebar">
+				<div>
+					<img src="https://via.placeholder.com/900/ffffaa/808080%20?Text=Digital.com" alt="">
+					<p>legenda</p>
+				</div>
+				<div>
+					<img src="https://via.placeholder.com/900/ffffaa/808080%20?Text=Digital.com" alt="">
+					<p>legenda</p>
+				</div>
+				<div>
+					<img src="https://via.placeholder.com/900/ffffaa/808080%20?Text=Digital.com" alt="">
+					<p>legenda</p>
+				</div>
+				<div>
+					<img src="https://via.placeholder.com/900/ffffaa/808080%20?Text=Digital.com" alt="">
+					<p>legenda</p>
+				</div>
+			</div>
+		</section>
+
+		<script type="text/javascript">
+			const $ = document
+			const app = $.querySelector('#app')
+			window.onload = function() {
+				app.innerHTML = `
+					<header class="header">
+						<a href="/">LOGO</a>
+						<nav>
+							<ul class="menu">
+								<li><a href="./grid.html">Grid 1</a></li>
+								<li><a href="./grid2.html">Grid 2</a></li>
+								<li><a href="">SOBRE</a></li>
+							</ul>
+						</nav>
+					</header>				
+				`
+			}
+		</script>
+	</body>
+</html>

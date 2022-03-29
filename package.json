@@ -1,0 +1,19 @@
+{
+	"name": "estudo",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "nodemon --exec index.html"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"nodemon": "^2.0.15"
+	},
+	"nodemonConfig": {
+	  "ext": "js,html"
+	}
+	
+}

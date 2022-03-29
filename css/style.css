@@ -1,0 +1,160 @@
+body,
+ul,
+li,
+p {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	font-size: 1.2rem;
+	font-family: arial;
+	box-sizing: border-box;
+}
+
+
+h1 {
+	text-align: center;
+	margin-top: 6.25rem;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/* css flexbox */
+.header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	background: tomato;
+	padding: 1.25rem;
+}
+
+.menu {
+	display: flex;
+}
+
+.menu li {
+	margin-left: 0.825rem;
+}
+
+.menu li a {
+	padding: 0.625rem;
+	background: red;
+}
+
+
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 60rem;
+	margin: 0 auto;
+}
+
+.flex>div {
+	flex: 1 1 13.5rem;
+	margin: 10px;
+}
+
+
+
+
+/* CSS GRID LAYOUT */
+
+
+.grid1 {
+	display: grid;
+	grid-template-columns: 1fr repeat(2, 1fr);
+	max-width: 800px;
+	padding: 0.625rem;
+	margin: 0 auto;
+	gap: 1.25rem;
+	text-align: center;
+}
+
+#app {
+	margin-bottom: 6.25rem !important;
+}
+
+.grid1>div {
+	align-items: center;
+}
+
+.grid1>div:nth-child(n+4) {
+	display: grid;
+	gap: 0.625rem;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+
+.grid1>div.anuncio {
+	grid-column: 1;
+	grid-row: 2/5;
+	display: block;
+	border-top: 5px solid tomato;
+}
+
+@media (max-width: 37.5rem) {
+	.grid1 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.grid1>div:nth-child(n+4) {
+		display: block;
+	}
+
+	.grid1>div.anuncio {
+		grid-column: auto;
+		grid-row: auto;
+		order: -1;
+	}
+}
+
+
+.grid2 {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	gap: 1.125rem;
+}
+
+.video {
+	border-top: 0.2875rem solid rgba(12, 129, 255, 0.5);
+	border-radius: 0.3125rem;
+	height: max-content;
+
+	box-shadow: 0.1875rem 0.1875rem 0.3125rem #888;
+}
+
+
+.sidebar>div>img {
+	border-radius: 0.5rem;
+	margin-right: 0.3125rem;
+}
+
+.sidebar>div>img:nth-child(2n+1) {
+	border-top: 5px solid rgba(85, 0, 255, 0.5);
+}
+
+
+@media (max-width: 800px) {
+	.grid2 {
+		grid-template-columns: 1fr;
+	}
+
+	.sidebar {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.125rem;		
+	}
+	.sidebar>div>img{
+		max-height: 22rem;
+		margin: 0 auto;
+		
+	}
+}
