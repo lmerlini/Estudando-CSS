@@ -78,10 +78,6 @@ a {
 	text-align: center;
 }
 
-#app {
-	margin-bottom: 6.25rem !important;
-}
-
 .grid1>div {
 	align-items: center;
 }
@@ -150,11 +146,12 @@ a {
 	.sidebar {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		gap: 1.125rem;		
+		gap: 1.125rem;
 	}
-	.sidebar>div>img{
+
+	.sidebar>div>img {
 		max-height: 22rem;
 		margin: 0 auto;
-		
+
 	}
 }

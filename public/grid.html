@@ -7,7 +7,14 @@
 		<link rel="stylesheet" href="../css/style.css">
 	</head>
 	<body>
-		<div id="app"></div>
+		<header class="header">
+			<a href="/">LOGO</a>
+			<nav>
+				<ul id="ul" class="menu">
+					<div id="app"></div>
+				</ul>
+			</nav>
+		</header>
 
 		<section class="grid1">
 			<div>
@@ -62,23 +69,6 @@
 			</div>
 
 		</section>
-		<script type="text/javascript">
-			const $ = document
-			const app = $.querySelector('#app')
-			window.onload = function() {
-				app.innerHTML = `
-					<header class="header">
-						<a href="/">LOGO</a>
-						<nav>
-							<ul class="menu">
-								<li><a href="./grid.html">Grid 1</a></li>
-								<li><a href="./grid2.html">Grid 2</a></li>
-								<li><a href="./testmodule.html">Teste Module</a></li>
-							</ul>
-						</nav>
-					</header>				
-				`
-			}
-		</script>
+		<script type="module" src="../js/index.js"></script>
 	</body>
 </html>

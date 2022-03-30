@@ -1,37 +1,29 @@
 function nav(target, ...name) {
 	const $ = document;
 
-	let menu;
-	let createList;
+	if (!target) {
+		throw new Error('Não foi recebido o parametro Target');
+	}
+
+	if ((!name.length) || (typeof name != 'object')) {
+		throw new Error('Segundo parametro não é um objeto');
+	}
+
 	try {
 		let element = $.querySelector(target)
+		name.forEach(function(e) {
+			let ul = $.querySelector('#ul');
+			let li = $.createElement('li')
+			let a = $.createElement('a')
 
-	
-		name.forEach(function(e){
-			let link = $.createElement('a')
-			console.log(link)
-			let text = $.createTextNode(e.text)
-			let attr = $.createAttribute()
-			
-			link.appendChild(text)
-			
+			a.setAttribute('href', e.url)
+			a.appendChild($.createTextNode(e.text))
+
+			ul.appendChild(li)
+			li.appendChild(a)
+
 		})
 
-
-		window.onload = function() {
-			element.innerHTML = ` 
-		<header class="header">
-			<a href="/">LOGO</a>
-			<nav>
-				<ul class="menu">
-					<li><a href="./grid.html">Grid 1</a></li>
-					<li><a href="./grid2.html">Grid 2</a></li>
-					<li><a href="./testmodule.html">Teste Module</a></li>
-				</ul>
-			</nav>
-		</header>		
-		`
-		}
 	} catch (e) {
 		//TODO..../
 	}
